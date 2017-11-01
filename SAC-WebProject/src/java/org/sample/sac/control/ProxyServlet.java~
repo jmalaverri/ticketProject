@@ -1,0 +1,84 @@
+/*
+ * 01010011 01100001 01101101 01110000 01101100 01100101 
+ * 01000011 01101111 01100100 01100101 00100001
+ */
+package org.Sample.sac.control;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import org.Sample.sac.model.ProxyTicket;
+import org.Sample.sac.model.TicketRPC;
+
+/**
+ *
+ * @author Luis Martín Canaval Sánchez
+ */
+@WebServlet(name = "Proxy", urlPatterns = {"/proxy/listar"})
+public class ProxyServlet extends HttpServlet {
+
+  @Override
+  protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    resp.setContentType("application/json");
+    PrintWriter out = resp.getWriter();
+    TicketRPC trpc = new TicketRPC();
+    out.print('[');
+    boolean first = true;
+    for(ProxyTicket pt : trpc.find()) { // TODO: ver
+      if(!first) {
+        out.print(',');
+      }
+      first = false;
+      out.print(pt.toString());
+    }
+    out.print(']');
+    /*out.print("[\n"
+            + "    {\n"
+            + "      \"id\": 1,\n"
+            + "      \"title\": \"Lorem ipsum\",\n"
+            + "      \"status\": \"Aberto\",\n"
+            + "      \"dateUpdate\": \"22/04/2013\",\n"
+            + "      \"attachments\": [\n"
+            + "        {\"filename\": \"readme.txt\", \"size\": 200},\n"
+            + "        {\"filename\": \"screenshot001.png\", \"size\": 120}\n"
+            + "      ]\n"
+            + "    },\n"
+            + "    {\n"
+            + "      \"id\": 2,\n"
+            + "      \"title\": \"Lorem ipsum 2\",\n"
+            + "      \"status\": \"Solucionado\",\n"
+            + "      \"dateUpdate\": \"21/04/2013\"\n"
+            + "    },\n"
+            + "    {\n"
+            + "      \"id\": 3,\n"
+            + "      \"title\": \"Lorem ipsum 3\",\n"
+            + "      \"status\": \"Em andamento\",\n"
+            + "      \"dateUpdate\": \"20/04/2013\"\n"
+            + "    }\n"
+            + "  ]");*/
+    
+    out.close();
+  }
+
+  @Override
+  protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    // TODO: Implement ProxyServlet.doPost!
+    super.doPost(req, resp);
+  }
+
+  @Override
+  protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    // TODO: Implement ProxyServlet.doPut!
+    super.doPut(req, resp);
+  }
+
+  @Override
+  protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    // TODO: Implement ProxyServlet.doDelete!
+    super.doDelete(req, resp);
+  }
+}

@@ -1,0 +1,147 @@
+          <div id="ticketDetalhe">
+            <div class="rightSpecial">
+              <a id="atualizarTicket" href="#" class="btn btn-success">Atualizar Ticket</a>
+            </div>
+            <div class="clearfix">
+              <h5 ng-repeat="detail in details">
+                Ticket Criado em: <time>{{detail.creationDate}}</time>
+                Por {{detail.reporter}}
+              </h5>
+              <h5>Descri&ccedil;&atilde;o</h5>
+              <p class="muted" ng-repeat="desc in details">
+                  {{desc.description}}
+                <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eros lectus, pulvinar in consequat eu, vehicula eget enim. Aliquam erat volutpat. Maecenas turpis lacus, rhoncus eu vehicula id, tincidunt vel nisi. Pellentesque ac tellus nec elit semper imperdiet nec id est. In sodales dui nibh. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque dapibus lacus non ligula hendrerit vitae luctus tellus viverra. Cras in diam enim.-->
+              </p>
+
+              <table class="table table-striped table-hover">
+                <tbody>
+                  <tr ng-repeat="attachment in attachments">
+                    <td><a href="#">{{attachment.fileName}}</a></td>
+                    <td>{{attachment.fileDesc}}</td>
+                    <td>{{attachment.size}} bytes</td>
+                    <td>{{attachment.date}}</td>
+                    <td>{{attachment.uploader}}</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="row-fluid">
+                <div class="span5">
+                  <h5>Comentário</h5>
+                </div>
+                <div class="span3">
+                  <h5>Responsável</h5>
+                </div>
+                <div class="span4">
+                  <h5>Arquivos</h5>
+                </div>
+              </div>
+              <div id="formC" class="row-fluid hidden">
+                <div class="span5">
+                  <textarea rows="6" class="span12" placeholder="Lorem ipmsum"></textarea>
+                </div>
+                <div class="span3">
+                  John Doe
+                </div>
+                <div class="span4">
+                  <button id="file" class="btn">Anexar</button>
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td><a href="#">Screenshot 001</a></td>
+                        <td>200KB</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">Screenshot 002</a></td>
+                        <td>200KB</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="rightSpecial">
+                  <button id="comentarioSalvar" class="btn btn-inverse">Salvar</button>
+                </div>
+                <hr>
+              </div>
+              <div class="row-fluid">
+                <div class="span5">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eros lectus, pulvinar in consequat eu.</p>
+                </div>
+                <div class="span3">
+                  Jhon Reese
+                </div>
+                <div class="span4">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td><a href="#">Screenshot 001</a></td>
+                        <td>200KB</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">Screenshot 002</a></td>
+                        <td>200KB</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">Screenshot 003</a></td>
+                        <td>214KB</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <hr>
+              <div class="row-fluid">
+                <div class="span5">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eros lectus, pulvinar in consequat eu.</p>
+                </div>
+                <div class="span3">
+                  Jhon Reese
+                </div>
+                <div class="span4">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td><a href="#">Screenshot 001</a></td>
+                        <td>200KB</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">Screenshot 002</a></td>
+                        <td>200KB</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">Screenshot 003</a></td>
+                        <td>214KB</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <hr>
+              <div class="row-fluid">
+                <div class="span5">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eros lectus, pulvinar in consequat eu.</p>
+                </div>
+                <div class="span3">
+                  Jhon Reese
+                </div>
+                <div class="span4">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td><a href="#">Screenshot 001</a></td>
+                        <td>200KB</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">Screenshot 002</a></td>
+                        <td>200KB</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">Screenshot 003</a></td>
+                        <td>214KB</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>

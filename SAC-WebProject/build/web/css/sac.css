@@ -1,0 +1,11 @@
+body {
+  padding: 60px;
+}
+
+.table-nonfluid {
+   width: auto;
+}
+
+.rightSpecial {
+  text-align: right;
+}

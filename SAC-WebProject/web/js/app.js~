@@ -1,0 +1,11 @@
+/*function TicketViewController($scope, Tickets){
+	$scope.tickets = Tickets.query();
+}*/
+
+angular.module('ticket', ['ticketFilters', 'ticketServices']).
+config(['$routeProvider', function($routeProvider) {
+  $routeProvider.
+      when('/tickets', {templateUrl: '/home.html',   controller: TicketViewController});
+      //when('/tickets/criarTicket', {templateUrl: '/home.html/formT',   controller: TicketCreateController});
+
+}]);
